@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 16</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__column">
+        <button class="btn">Нажми, чтобы вычислить сумму</button>
+      </div>
+      <div name="main" class="main-form" id="calculate-form" action="#">
+        <div class="main-form__column">
+          <div class="main-form__item">
+            <label for="mark" class="main-form__label">Марка</label>
+            <select id="mark" name="markSelect" class="main-form__select">
+              <option value="select-mark" selected>
+                Выберите марку автомобиля из списка
+              </option>
+              <option value="10500">Audi</option>
+              <option value="11000">BMW</option>
+              <option value="10000">Ford</option>
+              <option value="9000">Honda</option>
+              <option value="9500">Mazda</option>
+              <option value="8200">Nissan</option>
+              <option value="7000">Renault</option>
+              <option value="8000">Skoda</option>
+              <option value="9700">Toyota</option>
+              <option value="9600">Volkswagen</option>
+            </select>
+            <div class="main-form__msg">
+              <div id="error_marks" class="msg-error"></div>
+            </div>
+          </div>
+          <div class="main-form__item">
+            <label for="gearbox" class="main-form__label"
+              >Коробка передач</label
+            >
+            <select id="gearbox" name="gearboxSelect" class="main-form__select">
+              <option value="0" selected>
+                Выберите коробку передач из списка
+              </option>
+              <option value="5000">Автомат</option>
+              <option value="4500">Механика</option>
+            </select>
+            <div class="main-form__msg">
+              <div id="error_gearbox" class="msg-error"></div>
+            </div>
+          </div>
+          <div class="main-form__item">
+            <label for="drive" class="main-form__label">Привод</label>
+            <select id="drive" name="driveSelect" class="main-form__select">
+              <option value="0" selected>Выберите тип привода из списка</option>
+              <option value="3000">Передний</option>
+              <option value="4000">Задний</option>
+              <option value="5000">Полный</option>
+            </select>
+            <div class="main-form__msg">
+              <div id="error_drive" class="msg-error"></div>
+            </div>
+          </div>
+          <div class="main-form__item">
+            <label for="carbody" class="main-form__label">Тип кузова</label>
+            <select id="carbody" name="carbodySelect" class="main-form__select">
+              <option value="0" selected>Выберите тип кузова из списка</option>
+              <option value="7000">Внедорожник</option>
+              <option value="6000">Купе</option>
+              <option value="4000">Лифтбек</option>
+              <option value="6000">Микроавтобус</option>
+              <option value="5000">Минивэн</option>
+              <option value="3000">Универсал</option>
+              <option value="3500">Хэтчбек</option>
+            </select>
+            <div class="main-form__msg">
+              <div id="error_carbody" class="msg-error"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-form__column">
+          <div class="main-form__item">
+            <label class="main-form__label">Пробег</label>
+            <div class="main-form__radio">
+              <input
+                value="7000"
+                type="radio"
+                name="runRadio"
+                class="main-form__radio"
+                id="5000"
+              />
+              <label for="5000" class="main-form__inline-label"
+                >до 5000 км</label
+              >
+            </div>
+            <div class="main-form__radio">
+              <input
+                value="6000"
+                type="radio"
+                name="runRadio"
+                class="main-form__radio"
+                id="5000-10000"
+              />
+              <label for="5000-10000" class="main-form__inline-label"
+                >от 5000 до 10 000 км</label
+              >
+            </div>
+            <div class="main-form__radio">
+              <input
+                value="5000"
+                type="radio"
+                name="runRadio"
+                class="main-form__radio"
+                id="10000-20000"
+              />
+              <label for="10000-20000" class="main-form__inline-label"
+                >от 10 000 до 20 000 км</label
+              >
+            </div>
+
+            <div class="main-form__radio">
+              <input
+                value="4000"
+                type="radio"
+                name="runRadio"
+                class="main-form__radio"
+                id="20000"
+              />
+              <label for="20000" class="main-form__inline-label"
+                >свыше 20 000 км</label
+              >
+            </div>
+            <div class="main-form__msg">
+              <div id="error_run" class="msg-error"></div>
+            </div>
+          </div>
+          <div class="main-form__item">
+            <label class="main-form__label">Возраст</label>
+            <div class="main-form__radio">
+              <input
+                type="radio"
+                name="ageRadio"
+                class="main-form__radio"
+                value="12000"
+                id="radio_1"
+              />
+              <label for="radio_1" class="main-form__inline-label"
+                >до 3-х лет</label
+              >
+            </div>
+            <div class="main-form__radio">
+              <input
+                type="radio"
+                name="ageRadio"
+                class="main-form__radio"
+                value="10000"
+                id="radio_2"
+              />
+              <label for="radio_2" class="main-form__inline-label"
+                >от 3-х до 5-ти лет</label
+              >
+            </div>
+            <div class="main-form__radio">
+              <input
+                type="radio"
+                name="ageRadio"
+                class="main-form__radio"
+                value="8000"
+                id="radio_3"
+              />
+              <label for="radio_3" class="main-form__inline-label"
+                >от 5-ти до 10-ти лет</label
+              >
+            </div>
+            <div class="main-form__radio">
+              <input
+                type="radio"
+                name="ageRadio"
+                class="main-form__radio"
+                value="6000"
+                id="radio_4"
+              />
+              <label for="radio_4" class="main-form__inline-label"
+                >от 10-ти до 15-ти лет</label
+              >
+            </div>
+            <div class="main-form__radio">
+              <input
+                type="radio"
+                name="ageRadio"
+                class="main-form__radio"
+                value="5000"
+                id="radio_5"
+              />
+              <label for="radio_5" class="main-form__inline-label"
+                >свыше 15-ти лет</label
+              >
+            </div>
+            <div class="main-form__msg">
+              <div id="error_age" class="msg-error"></div>
+            </div>
+          </div>
+          <h4>Наличие систем помощи и безопасности</h4>
+          <div class="main-form__item_checkbox">
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="absCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="5000"
+                id="check_1"
+              />
+              <label for="check_1" class="main-form__inline-label">ABS</label>
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="alarmCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="3000"
+                id="check_2"
+              />
+              <label for="check_2" class="main-form__inline-label"
+                >Сигнализация</label
+              >
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="rainCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="3000"
+                id="check_3"
+              />
+              <label for="check_3" class="main-form__inline-label"
+                >Датчик дождя</label
+              >
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="parkCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="4000"
+                id="check_4"
+              />
+              <label for="check_4" class="main-form__inline-label"
+                >Парктроники</label
+              >
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="cameraCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="5000"
+                id="check_5"
+              />
+              <label for="check_5" class="main-form__inline-label"
+                >Камера заднего вида</label
+              >
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="topCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="6000"
+                id="check_6"
+              />
+              <label for="check_6" class="main-form__inline-label"
+                >Панорамная крыша</label
+              >
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="climatCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="4000"
+                id="check_7"
+              />
+              <label for="check_7" class="main-form__inline-label"
+                >Климат-контроль</label
+              >
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="condCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="2000"
+                id="check_8"
+              />
+              <label for="check_8" class="main-form__inline-label"
+                >Кондиционер</label
+              >
+            </div>
+            <div class="main-form__item_check">
+              <input
+                type="checkbox"
+                name="nameCheck"
+                class="main-form__radio main-form__radio-checkbox"
+                value="5000"
+                id="check_9"
+              />
+              <label for="check_9" class="main-form__inline-label"
+                >Круиз-контроль</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="main-form__column">
+          <button type="submit" class="main-form__button">Рассчитать</button>
+        </div>
+        <div id="result" class="result"><span id="span">0</span> руб.</div>
+      </div>
+    </div>
+    <div class="btns">
+      <button onclick="getElement()">Вывести первый элемент</button>
+      <button onclick="filterArr()">Вывести отфильтрованный массив</button>
+      <button onclick="findIndex()">Найти индекс массива</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
