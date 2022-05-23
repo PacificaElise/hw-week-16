@@ -53,7 +53,6 @@ a:hover {
   padding: 15px;
   font-size: 16px;
   font-weight: 700;
-  cursor: pointer;
   background-color: rgb(231, 231, 0);
 }
 
@@ -69,6 +68,14 @@ button {
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+  height: 20px;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 button:hover {

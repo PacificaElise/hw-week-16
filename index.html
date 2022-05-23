@@ -132,6 +132,8 @@
                 >свыше 20 000 км</label
               >
             </div>
+            <button class="btn1">Запомнить выбор</button>
+
             <div class="main-form__msg">
               <div id="error_run" class="msg-error"></div>
             </div>
@@ -198,6 +200,8 @@
                 >свыше 15-ти лет</label
               >
             </div>
+            <button class="btn2">Запомнить выбор</button>
+
             <div class="main-form__msg">
               <div id="error_age" class="msg-error"></div>
             </div>
@@ -207,8 +211,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="absCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="5000"
                 id="check_1"
               />
@@ -217,8 +221,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="alarmCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="3000"
                 id="check_2"
               />
@@ -229,8 +233,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="rainCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="3000"
                 id="check_3"
               />
@@ -241,8 +245,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="parkCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="4000"
                 id="check_4"
               />
@@ -253,8 +257,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="cameraCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="5000"
                 id="check_5"
               />
@@ -265,8 +269,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="topCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="6000"
                 id="check_6"
               />
@@ -277,8 +281,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="climatCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="4000"
                 id="check_7"
               />
@@ -289,8 +293,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="condCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="2000"
                 id="check_8"
               />
@@ -301,8 +305,8 @@
             <div class="main-form__item_check">
               <input
                 type="checkbox"
-                name="nameCheck"
-                class="main-form__radio main-form__radio-checkbox"
+                name="check"
+                class="main-form__radio"
                 value="5000"
                 id="check_9"
               />
@@ -311,10 +315,14 @@
               >
             </div>
           </div>
+          <button class="btn3">Запомнить выбор</button>
         </div>
 
         <div class="main-form__column">
           <button type="submit" class="main-form__button">Рассчитать</button>
+          <div class="main-form__msg">
+            <div id="error_all" class="msg-error"></div>
+          </div>
         </div>
         <div id="result" class="result"><span id="span">0</span> руб.</div>
       </div>

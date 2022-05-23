@@ -81,29 +81,59 @@ carbody.addEventListener("change", function(e) {
     arrCost.push (+selectСarbody);
 });
 
-
+let btn1 = document.querySelector('.btn1');
 let runs = document.querySelectorAll('input[name="runRadio"]');
-for (let run of runs) {
-    if (run.checked) {
-        console.log(+run.value);
-    }
-} // не получается вывести значение выбранной кнопки, хотела его добавить в массив(((
 
-function getCheckedCheckBoxes() {
-    let checkboxes = document.getElementsByClassName('main-form__radio-checkbox');
+btn1.addEventListener ('click', function() {
+    document.querySelector('#error_run').innerHTML = ''
+    for (let run of runs) {
+    if (run.checked) {
+        arrCost.push(+run.value);
+        } else {  
+        document.querySelector('#error_run').innerHTML = 'Выберите пробег автомобиля';
+        }
+    }
+});
+
+let btn2 = document.querySelector('.btn2');
+let ages = document.querySelectorAll('input[name="ageRadio"]');
+
+btn2.addEventListener ('click', function() {
+    document.querySelector('#error_age').innerHTML = ''
+    for (let age of ages) {
+    if (age.checked) {
+        arrCost.push(+age.value);
+        } else {  
+        document.querySelector('#error_age').innerHTML = 'Выберите возраст автомобиля';
+        }
+    }
+});
+
+
+let btn3 = document.querySelector('.btn3');
+
+btn3.addEventListener ('click', function() {
+    let checkboxes = document.querySelectorAll('input[name="check"]');
         for (let i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked) {
                 arrCost.push(+checkboxes[i].value); 
             }
         } 
-    } // и тут тоже не получилось добавить в массив выбранные чекбоксы(((
-
+    });
+        
 console.log(arrCost);
 
-let result = document.querySelector("#result");
+
+let result = document.querySelector(".main-form__button");
 
 result.addEventListener("click", function(e) {
+    document.querySelector('#error_all').innerHTML = '';
+    if (arrCost.length == 0) {
+    document.querySelector('#error_all').innerHTML = 'Заполните все поля!';
+    } else {
     document.querySelector('#result span').innerHTML = arrCost.reduce((a,b)=>a+b);
+    ;
+    }
 });
 
 
